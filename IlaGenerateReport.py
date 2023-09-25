@@ -8,6 +8,7 @@ from email.message import EmailMessage
 from email.utils import make_msgid
 import numpy as np
 import matplotlib.pyplot as plt
+import mimetypes
 
 # files used
 BH_report = 'HTML Files/reportBH.html'
@@ -212,6 +213,7 @@ def createOverallExecutionTable(BH_JSON_nam, JO_JSON_nam):
     JO_Total_list = substitueValues(JO_data, 'Total')
 
     revisedScope = 800
+
     totalTCs = sum(BH_Total_list) + sum(JO_Total_list)
     totalPassTCs = sum(BH_pass_list) + sum(JO_pass_list)
     totalFailTCs = sum(BH_fail_list) + sum(JO_fail_list)
@@ -285,6 +287,31 @@ createUpdateJSON(BH_JSON_name, BH_report)
 createUpdateJSON(JO_JSON_name, JO_report)
 
 
+def addAttachmnet(file_name, msg):
+    attachment_path = file_name
+    attachment_filename = os.path.basename(attachment_path)
+    mime_type, _ = mimetypes.guess_type(attachment_path)
+    mime_type, mime_subtype = mime_type.split('/', 1)
+    print(mime_type)
+    with open(attachment_path, 'rb') as ap:
+        msg.add_attachment(ap.read(), maintype=mime_type, subtype=mime_subtype, filename=attachment_filename)
+
+
+# Mail-setup
+smtp_server = 'smtp.office365.com'
+smtp_port = 587
+smtp_username = 'ilaapphealthcheck@maveric-systems.com'
+smtp_password = 'Maveric@6781'
+smtp_from = 'ilaapphealthcheck@maveric-systems.com'
+smtp_to = ['akshaypa@maveric-systems.com']
+
+# HTML CODE
+mssg = EmailMessage()
+mssg['Subject'] = "ila Mobile Health Check Sanity Status - BH & JO - " + str(Today_Date)
+mssg['From'] = smtp_from
+mssg['To'] = smtp_to
+
+
 # HTML CODE
 mssg = EmailMessage()
 mssg['Subject'] = "ila Mobile Health Check Sanity Status - BH & JO - " + str(Today_Date)
@@ -350,12 +377,8 @@ mssg.add_alternative("""\
 """.format(asparagus_cid=asparagus_cid[1:-1]), subtype='html')
 
 # Mail-setup
-smtp_server = 'smtp.office365.com'
-smtp_port = 587
-smtp_username = 'ilaapphealthcheck@maveric-systems.com'
-smtp_password = 'Maveric@6781'
-smtp_from = 'ilaapphealthcheck@maveric-systems.com'
-smtp_to = ['akshaypa@maveric-systems.com']
+addAttachmnet(BH_report,mssg)
+addAttachmnet(JO_report, mssg)
 
 # sending mail
 mail_server = smtplib.SMTP(smtp_server, smtp_port)
