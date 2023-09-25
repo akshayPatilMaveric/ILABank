@@ -1,0 +1,114 @@
+{
+  "2023-09-07 Thu": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-08 Fri": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-09 Sat": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-10 Sun": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-11 Mon": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-12 Tue": {
+    "Total": 28,
+    "Pass": 20,
+    "Fail": 8,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-13 Wed": {
+    "Total": 36,
+    "Pass": 20,
+    "Fail": 16,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-14 Thu": {
+    "Total": 36,
+    "Pass": 16,
+    "Fail": 20,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-15 Fri": {
+    "Total": 36,
+    "Pass": 29,
+    "Fail": 7,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-16 Sat": {
+    "Total": 36,
+    "Pass": 32,
+    "Fail": 4,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-18 Mon": {
+    "Total": 36,
+    "Pass": 26,
+    "Fail": 10,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-19 Tue": {
+    "Total": 36,
+    "Pass": 30,
+    "Fail": 6,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-20 Wed": {
+    "Total": 36,
+    "Pass": 23,
+    "Fail": 13,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  },
+  "2023-09-21 Thu": {
+    "Total": 36,
+    "Pass": 36,
+    "Fail": 0,
+    "Failed Scenarios": [
+      "No failed cases"
+    ]
+  }
+}
